@@ -6,59 +6,109 @@
     <title>Сервіс обліке студентів</title>
     <meta name="description" value="Система обліке студентів Навчального Закладу" />
    
-    <!--Bootsrap scc -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
-    <!--JS, Popper.js, and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+   <!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="main.css"> 
     
 </head>
-
 <body>
-    <h1>Форма Редагування Студента</h1>    
-    <!--Start Form-->
-    <form id="form">
-        <div class="row" id="form">
-            <div class="col-3">
-                <input type="text" class="form-control" placeholder="Ім'я">
-            </div>
-        </div> 
-        <div class="row" id="form">
-                <div class="col-3">
-                    <input type="text" class="form-control" placeholder="По батькові">
-                </div>
-            </div> 
-        <div class="row" id="form">
-            <div class="col-3">
-                <input type="text" class="form-control" placeholder="Прізвище*">
-            </div>
-        </div> 
-        <div class="row" id="form">
-            <div class="col-3">
-                <input type="text" class="form-control" placeholder="№ Білету*">
-            </div>
-        </div> 
-        <div class="row" id="form">
-            <div class="col-3">
-                <input type="text" class="form-control" placeholder="Дата народження">
-            </div>
-        </div>
-        <div class="input-group mb-3" id="form" class="col-3">
-            <div class="custom-file" >
-                  <input type="file" class="custom-file-input" id="inputGroupFile02">
-                  <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
-                </div>
-                <div class="input-group-append">
-                  <span class="input-group-text" id="">Upload</span>
-            </div>
-        </div> 
-    </form>
-    <!--End Form-->
+    
+    <div class="container">
+        <div class="row">
+             <form class="form-horizontal">
+                <fieldset>
+                    <!-- Add student form -->
+             
+                    <h2>Форма редагування Студента</h2>
+             
+                    <!--Start name input-->
+                    <div class="control-group">
+                        <label class="control-label">Ім'я</label>
+                        <div class="controls">
+                            <input id="full-name" name="full-name" type="text" placeholder=""
+                            class="input-xlarge">
+                            <p class="help-block"></p>
+                        </div>
+                    </div>
+                    <!--End name input-->
 
+                    <!--Start Fathername input-->
+                    <div class="control-group">
+                        <label class="control-label">По батькові</label>
+                        <div class="controls">
+                            <input id="full-name" name="full-name" type="text" placeholder=""
+                            class="input-xlarge">
+                            <p class="help-block"></p>
+                        </div>
+                    </div>
+                    <!--End Fathername input--> 
+
+                    <!--Start Surname input-->
+                    <div class="control-group">
+                        <label class="control-label">Прізвище</label>
+                        <div class="controls">
+                            <input id="full-name" name="full-name" type="text" placeholder=""
+                            class="input-xlarge">
+                            <p class="help-block"></p>
+                        </div>
+                    </div>
+                    <!--End Surname input-->
+
+                     <!--Start Number of ticket input-->
+                     <div class="control-group">
+                        <label class="control-label">№ Білету</label>
+                        <div class="controls">
+                            <input id="full-name" name="full-name" type="text" placeholder=""
+                            class="input-xlarge">
+                            <p class="help-block"></p>
+                        </div>
+                    </div>
+                    <!--End NUmber of ticket input-->
+                    
+                    <form method="post">
+                        <div class="form-group"> <!-- Date input -->
+                            <label class="control-label" for="date">Date</label>
+                            <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
+                        </div>
+                    </form>
+                    
+                    <form enctype="multipart/form-data" method="post">
+                        <p>Завантажити фото</p>
+                        <p><input type="file" name="photo" multiple accept="image/*,image/jpeg">
+                        <input type="submit" value="Очитити"></p>
+                    </form>
+                      
+                    <h6>Група</h6>
+                    <select class="custom-select" id="inputGroupSelect01">
+                        <option selected>МтМ-21</option>
+                        <option value="1">МтМ-22/option>
+                    </select>
+                    
+                    <div class="container">    
+                        <p>Додаткові нотатки</p>
+                        <form action="/action_page.php">
+                            <div class="form-group">  
+                                <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+                            </div>
+                            <button type="button" class="btn btn-primary">Зберегти</button>
+                            <button type="button" class="btn btn-light">Скасувати</button>
+                        </form>
+                    </div>
+                 
+                </fieldset>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
     
